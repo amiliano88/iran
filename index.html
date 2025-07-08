@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مکان‌های دیدنی ایران</title>
+  <link rel="stylesheet" href="iran.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌍 انتخاب استان و دیدن مکان دیدنی</h1>
+
+    <select id="province" class="select">
+      <option value="">-- انتخاب استان --</option>
+      <!-- استان‌ها از جاوااسکریپت پر می‌شوند -->
+    </select>
+
+    <button onclick="showRandomPlace()" class="btn">نشونم بده</button>
+
+    <div id="place-section" class="result"></div>
+
+    <div id="comment-section">
+      <h3>💬 این پایین می‌تونی نظرتو بنویسی</h3>
+      <textarea id="comment-input" placeholder="بنویس..." rows="4"></textarea>
+      <button onclick="addComment()" class="btn green">نظرمو اضافه کن</button>
+    </div>
+
+    <div id="comments-list">
+      <h3>کامنت‌ها:</h3>
+      <ul id="comments-ul"></ul>
+    </div>
+
+    <button onclick="resetProgress()" class="btn red">میخوام از اول ببینم</button>
+
+  </div>
+
+  <script src="iran.js"></script>
+</body>
+</html>
